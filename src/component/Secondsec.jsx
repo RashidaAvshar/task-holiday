@@ -35,12 +35,12 @@ const Secondsec = () => {
 
           </TabList>
         </Box>
-        <TabPanel value="1">All</TabPanel>
-        <TabPanel value="2">Women's</TabPanel>
-        <TabPanel value="3">Men's</TabPanel>
-        <TabPanel value="4">Kids</TabPanel>
-        <TabPanel value="5">Accessories</TabPanel>
-        <TabPanel value="6">Cosmetics</TabPanel>
+        <TabPanel value="1"></TabPanel>
+        <TabPanel value="2"></TabPanel>
+        <TabPanel value="3"></TabPanel>
+        <TabPanel value="4"></TabPanel>
+        <TabPanel value="5"></TabPanel>
+        <TabPanel value="6"></TabPanel>
       </TabContext>
     </Box>
         </div>

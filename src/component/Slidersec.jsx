@@ -3,10 +3,8 @@ import slider from "../image/slidersec/banner-1.jpg.webp";
 
 const Slidersec = () => {
   return (
-    <div>
-      <figure>
-      <img src={slider} alt="slider" />
-      </figure>
+    <div className='slider-back' style={{backgroundImage: `url('${slider}')`}}>
+      
     </div>
   )
 }

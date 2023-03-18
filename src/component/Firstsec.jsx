@@ -9,16 +9,28 @@ import imagefour from "../image/FirstSec/category-5.jpg.webp";
 const Firstsec = () => {
   return (
     <div className='section-first'>
-        <figure className='women'>
-            <img src={image} alt="section first" className='first'/>
-        </figure>
-        <figure className='men'>
-            <img src={imageone} alt="section first" className='one' />
-            <img src={imagetwo} alt="section first" className='one'/>
-            <img src={imagethree} alt="section first" className='one' />
-            <img src={imagefour} alt="section first" className='one' />
-        </figure>
-      
+        <div className='first-section-main' style={{backgroundImage: `url('${image}')`}}>
+          <h2>Women’s fashion</h2>
+          <h4>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore edolore magna aliquapendisse ultrices gravida.</h4>
+        </div>
+        <div className='first-section-advanced'>
+          <div style={{backgroundImage: `url('${imageone}')`}}>
+          <h2>Men’s fashion</h2>
+          <h4>description</h4>
+          </div>
+          <div style={{backgroundImage: `url('${imagetwo}')`}}>
+          <h2>Kid’s fashion</h2>
+          <h4>description</h4>
+          </div>
+          <div style={{backgroundImage: `url('${imagethree}')`}}>
+          <h2>Cosmetics</h2>
+          <h4>description</h4>
+          </div>
+          <div style={{backgroundImage: `url('${imagefour}')`}}>
+          <h2>Accessories</h2>
+          <h4>description</h4>
+          </div>
+        </div>
     </div>
   )
 }
