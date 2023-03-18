@@ -28,16 +28,25 @@ const Headers = () => {
                 </li>
                 <li>
                 <Link to="/contact">CONTACT</Link>
-                </li>
-                <ul className='logres'>
+                </li>           
+            </ul>
+            <ul className='logres'>
                 <li>
                 <Link to="/login">Login/Register</Link>
                 </li>
                 <li>
                 <Link to="/register"></Link>
-                </li>   
-                </ul>            
-            </ul>
+                </li> 
+                <li>
+                <span><i className="fa-solid fa-magnifying-glass"></i></span>
+                </li>  
+                <li>
+                <span><i className="fa-regular fa-heart"></i></span>
+                </li>
+                <li>
+                <span><i className="fa-solid fa-bag-shopping"></i></span>
+                </li> 
+                </ul> 
         </nav>
         
         </div>

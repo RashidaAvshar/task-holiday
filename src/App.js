@@ -10,6 +10,13 @@ import Shop from "./pages/Shop";
 import Womens from "./pages/Womens";
 import Home from "./pages/Home";
 import Mens from "./pages/Mens";
+// section
+import Firstsec from "./component/Firstsec";
+import Secondsec from "./component/Secondsec";
+import Slidersec from "./component/Slidersec";
+
+
+
 
 
 function App() {
@@ -27,6 +34,10 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
       </Routes>
+      <Firstsec/>
+      <Secondsec/>
+      <Slidersec/>
+  
     </div>
   );
 }
