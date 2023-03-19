@@ -11,24 +11,24 @@ const Firstsec = () => {
     <div className='section-first'>
         <div className='first-section-main' style={{backgroundImage: `url('${image}')`}}>
           <h2>Women’s fashion</h2>
-          <h4>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore edolore magna aliquapendisse ultrices gravida.</h4>
+          <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore edolore magna aliquapendisse ultrices gravida.</p>
         </div>
         <div className='first-section-advanced'>
           <div style={{backgroundImage: `url('${imageone}')`}}>
           <h2>Men’s fashion</h2>
-          <h4>description</h4>
+          <p>description</p>
           </div>
           <div style={{backgroundImage: `url('${imagetwo}')`}}>
           <h2>Kid’s fashion</h2>
-          <h4>description</h4>
+          <p>description</p>
           </div>
           <div style={{backgroundImage: `url('${imagethree}')`}}>
           <h2>Cosmetics</h2>
-          <h4>description</h4>
+          <p>description</p>
           </div>
           <div style={{backgroundImage: `url('${imagefour}')`}}>
           <h2>Accessories</h2>
-          <h4>description</h4>
+          <p>description</p>
           </div>
         </div>
     </div>

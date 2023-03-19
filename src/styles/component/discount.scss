@@ -1,0 +1,70 @@
+.discount-box{
+    width: 100%;
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    .image{
+        background-image: cover;
+        
+    }
+
+    .time{
+        width: 585px;
+        height: 390px;
+        background-color: #F4F4F4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            // border: 2px solid black;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 30px;
+
+            
+        }
+        .circle-menu{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 80px;
+            p{
+                font-size: 12px;
+                font-family: 'Montserrat', sans-serif;
+            }
+            h2{
+                color: #CA1515;
+                font-family: 'Cookie', cursive;
+                font-size: 60px;
+            }
+            h5{
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+                span{
+                    color: #CA1515;
+                    font-weight: 600;
+                }
+
+            }
+        }
+        a{
+            border-bottom: #CA1515;
+            color: black;
+            margin-top: 20px;
+        }
+        .countdown{
+            font-size: 30px;
+        }
+    }
+
+}
+

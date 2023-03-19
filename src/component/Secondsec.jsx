@@ -1,28 +1,56 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import axios from 'axios';
+import Shop from '../pages/Shop';
+
+
+
+const Card = ({image, title, price, description}) =>{
+
+
+  return (
+    <div className='card-section2'>
+    <img src={image} alt="product" />
+    <p>{title}</p>
+    <p>{description}</p>
+    <div className='icon'>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    </div>
+    <span> <span>$</span> {price}</span>
+    
+</div>
+  )
+}
 
 
 
 const Secondsec = () => {
     const [value, setValue] = useState('1');
-
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
+
+    const [data, setData] = useState([]);
+    useEffect(()=>{
+        axios.get("https://fakestoreapi.com/products").then((res)=>{
+            setData(res.data)
+            console.log(res.data)
+        })
+    },[])
+   
     
   return (
     <div className='container'>
-        <div className='second-nav'>
-        <div className='new-product'>
-        <h3>NEW PRODUCT</h3>
-        <span className='line'></span>
-        </div>  
-        <div className='tab'>
-        <Box sx={{ width: '100%', typography: 'body1' }}>
+       
+        <Box className = 'section3-home-box' sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
@@ -32,31 +60,66 @@ const Secondsec = () => {
             <Tab label="Kids" value="4" />
             <Tab label="Accessories" value="5" />
             <Tab label="Cosmetics" value="6" />
-
           </TabList>
         </Box>
-        <TabPanel value="1"></TabPanel>
-        <TabPanel value="2"></TabPanel>
-        <TabPanel value="3"></TabPanel>
-        <TabPanel value="4"></TabPanel>
-        <TabPanel value="5"></TabPanel>
-        <TabPanel value="6"></TabPanel>
+        <TabPanel className='tab-panel' value="1">
+            
+      {data.map(item=>(
+          <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description.slice(0,20)}/>
+        ))}
+        </TabPanel>
+
+        <TabPanel  className='tab-panel'  value="2">
+        {data.map(item=>{
+ if(item.category === "men's clothing"){
+  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+ }
+        }
+         
+        )}
+        </TabPanel>
+        <TabPanel  className='tab-panel'  value="3">
+        {data.map(item=>{
+ if(item.category === "jewelery"){
+  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+ }
+        }
+         
+        )}
+        </TabPanel>
+        <TabPanel  className='tab-panel'  value="4">
+        {data.map(item=>{
+ if(item.category === "electronics"){
+  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+ }
+        }
+         
+        )}
+        </TabPanel>
+        <TabPanel  className='tab-panel'  value="5">
+        {data.map(item=>{
+ if(item.category === "women's clothing"){
+  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+ }
+        }
+         
+        )}
+        </TabPanel>
+        <TabPanel  className='tab-panel'  value="6">
+        {data.map(item=>{
+ if(item.category === "men's clothing"){
+  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+ }
+        }
+         
+        )}
+        </TabPanel>
       </TabContext>
-    </Box>
-        </div>
-   
-        </div>
+    </Box> 
+      
 
         
-
-
-
-    <div className='card'>
-
-        </div>
-
-
-
+    
       
     </div>
   )

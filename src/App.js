@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Headers from "./component/Headers";
+import { data } from "./mockdata";
 // pages
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
@@ -14,6 +15,7 @@ import Mens from "./pages/Mens";
 import Firstsec from "./component/Firstsec";
 import Secondsec from "./component/Secondsec";
 import Slidersec from "./component/Slidersec";
+import Bestseller from "./component/Bestseller";
 
 
 
@@ -34,9 +36,22 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
       </Routes>
-      <Firstsec/>
-      <Secondsec/>
-      <Slidersec/>
+      {/* <Firstsec/>
+       <Secondsec/> */}
+      {/* <div className="container">
+      <div className="fashion-section">
+      {data.map(item=>(
+          <Shop  
+          img={item.image} 
+          title={item.title.slice(0, 45)} 
+          // description={item.description.slice(0,15)} 
+          price={item.price} 
+          />
+        ))}
+      </div> 
+      </div>  */}
+      {/* <Slidersec/>
+      <Bestseller/> */}
   
     </div>
   );
