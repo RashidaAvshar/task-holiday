@@ -14,7 +14,7 @@ const Shop = ({img, title, description, price}) => {
     <div className='card'>
     <img src={img} alt="product" />
         <p>{title}</p>
-        {/* <p>{description}</p> */}
+        <p>{description}</p>
         <div className='icon'>
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i>

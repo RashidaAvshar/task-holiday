@@ -49,7 +49,10 @@ const Secondsec = () => {
     
   return (
     <div className='container'>
-       
+      <div className="second-nav">
+        <h3>NEW PRODUCT</h3>
+        <span></span>
+        </div>
         <Box className = 'section3-home-box' sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -62,14 +65,25 @@ const Secondsec = () => {
             <Tab label="Cosmetics" value="6" />
           </TabList>
         </Box>
-        <TabPanel className='tab-panel' value="1">
-            
+        
+        <TabPanel className='tab-panel' value="1">            
       {data.map(item=>(
-          <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description.slice(0,20)}/>
+          <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
         ))}
         </TabPanel>
 
         <TabPanel  className='tab-panel'  value="2">
+        {data.map(item=>{
+ if(item.category === "women's clothing"){
+  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+ }
+        }
+         
+        )}
+        </TabPanel>
+
+
+        <TabPanel  className='tab-panel'  value="3">
         {data.map(item=>{
  if(item.category === "men's clothing"){
   return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
@@ -78,15 +92,8 @@ const Secondsec = () => {
          
         )}
         </TabPanel>
-        <TabPanel  className='tab-panel'  value="3">
-        {data.map(item=>{
- if(item.category === "jewelery"){
-  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
- }
-        }
-         
-        )}
-        </TabPanel>
+
+
         <TabPanel  className='tab-panel'  value="4">
         {data.map(item=>{
  if(item.category === "electronics"){
@@ -96,31 +103,38 @@ const Secondsec = () => {
          
         )}
         </TabPanel>
+
+
         <TabPanel  className='tab-panel'  value="5">
         {data.map(item=>{
- if(item.category === "women's clothing"){
+ if(item.category === "jewelery" ){
   return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
  }
         }
          
         )}
         </TabPanel>
+
+
         <TabPanel  className='tab-panel'  value="6">
         {data.map(item=>{
- if(item.category === "men's clothing"){
+ if(item.category === "women's clothing" ){
   return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
  }
         }
          
         )}
         </TabPanel>
+
+
       </TabContext>
+     
     </Box> 
       
 
         
     
-      
+    
     </div>
   )
 }

@@ -3,4 +3,102 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .car-service{
+        display: flex;
+        flex-direction: row;
+        i{
+            color: #CA1515;
+            font-size: 40px;
+        }
+        span{
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            h4{
+                color: #111111;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+            }
+            p{
+                color: #666666;
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }
+
+    .money-service{
+        display: flex;
+        flex-direction: row;
+        i{
+            color: #CA1515;
+            font-size: 40px;
+        }
+        span{
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            h4{
+                color: #111111;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+            }
+            p{
+                color: #666666;
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }
+
+    .support{
+        display: flex;
+        flex-direction: row;
+        i{
+            color: #CA1515;
+            font-size: 40px;
+        }
+        span{
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            h4{
+                color: #111111;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+            }
+            p{
+                color: #666666;
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }
+
+    .payment-service{
+        display: flex;
+        flex-direction: row;
+        i{
+            color: #CA1515;
+            font-size: 40px;
+        }
+        span{
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            h4{
+                color: #111111;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+            }
+            p{
+                color: #666666;
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }
 }
