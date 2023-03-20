@@ -75,7 +75,7 @@ const Secondsec = () => {
         <TabPanel  className='tab-panel'  value="2">
         {data.map(item=>{
  if(item.category === "women's clothing"){
-  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -86,7 +86,7 @@ const Secondsec = () => {
         <TabPanel  className='tab-panel'  value="3">
         {data.map(item=>{
  if(item.category === "men's clothing"){
-  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -97,7 +97,7 @@ const Secondsec = () => {
         <TabPanel  className='tab-panel'  value="4">
         {data.map(item=>{
  if(item.category === "electronics"){
-  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -108,7 +108,7 @@ const Secondsec = () => {
         <TabPanel  className='tab-panel'  value="5">
         {data.map(item=>{
  if(item.category === "jewelery" ){
-  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -119,7 +119,7 @@ const Secondsec = () => {
         <TabPanel  className='tab-panel'  value="6">
         {data.map(item=>{
  if(item.category === "women's clothing" ){
-  return <Card title = {item.title} image = {item.image} price = {item.price} description = {item.description}/>
+  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          

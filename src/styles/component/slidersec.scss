@@ -7,51 +7,66 @@
     align-items: center;
     // padding: 150px 200px;
     background-size: cover;
-    .carousel{
-        width: 500px;
-        height: 300px;
-        span{
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #ca1515;
-            font-size: 18px;
-        }
-        h2{
-            font-family: 'Cookie', cursive;
-            font-size: 50px;
-            margin-bottom: 15px;
-        }
-        a{
-            color: #ca1515;
-            text-transform: uppercase;
-
-        }
-    }
-
+    .carusel-play{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // border: 2px solid red;
+        // height: 500px;
+        // padding: 200px 0px 0px 0px;
+        .carousel{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;   
+        
+            span{
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #ca1515;
+                font-size: 18px;
+            }
+            h2{
+                font-family: 'Cookie', cursive;
+                font-size: 50px;
+                margin-bottom: 15px;
+            }
+            a{
+                color: #ca1515;
+                text-transform: uppercase;
     
-
-    & > * {
-        width: 50%;
-        height: 500px;
-        // border: 3px solid black;
-        background-size: cover;
-    }
-    @media screen and (max-width:1200px) {
-        .slider-back{
-            width: 100%;
-        }
-        .carousel {
-            width: 100%;         
-        }       
-    }
-
-
-    @media screen and (max-width:800px) {
-        .slider-back{
-            & > * {
-                width: 100%;
             }
         }
+    
+        
+    
+        & > * {
+            width: 50%;
+            height: 500px;
+            // border: 3px solid black;
+            background-size: cover;
+        }
+        @media screen and (max-width:1200px) {
+            .slider-back{
+                width: 100%;
+            }
+            .carousel {
+                width: 100%;         
+            }       
+        }
+    
+    
+        @media screen and (max-width:800px) {
+            .slider-back{
+                & > * {
+                    width: 100%;
+                }
+            }
+    
+        }
+
 
     }
+    
 }
