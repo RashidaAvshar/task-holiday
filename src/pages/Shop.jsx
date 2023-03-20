@@ -43,6 +43,8 @@ const Shop = ({img, title, description, price}) => {
   return (
     <div className='container'>
        <Accordion>
+        <h4>CATEGORIES</h4>
+        <div className='line'></div>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -160,14 +162,70 @@ const Shop = ({img, title, description, price}) => {
 
 
 
-    <div>
+    <ul>
+      <h4>SHOP BY SIZE</h4>
+      <div className='line'></div>
+      <li>
+      <Checkbox {...label} defaultChecked size="small" /> 
+      <span>XXS</span>
+      </li>
+      <li>
       <Checkbox {...label} defaultChecked size="small" />
+      <span>XS</span>
+      </li>
+      <li>
       <Checkbox {...label} defaultChecked size="small" />
+      <span>S</span>
+      </li>
+      <li>
       <Checkbox {...label} defaultChecked size="small" />
+      <span>M</span>
+      </li>
+      <li>
       <Checkbox {...label} defaultChecked size="small" />
+      <span>L</span>
+      </li>
+      <li>
       <Checkbox {...label} defaultChecked size="small" />
+      <span>XL</span>
+      </li>
+    </ul>
+    <ul>
+      <h4>SHOP BY SIZE</h4>
+      <div className='line'></div>
+      <li>
+      <Checkbox {...label} defaultChecked size="small" /> 
+      <span>Black</span>
+      </li>
+      <li>
       <Checkbox {...label} defaultChecked size="small" />
-    </div>
+      <span>Whites</span>
+      </li>
+      <li>
+      <Checkbox {...label} defaultChecked size="small" />
+      <span>Reds</span>
+      </li>
+      <li>
+      <Checkbox {...label} defaultChecked size="small" />
+      <span>Greys</span>
+      </li>
+      <li>
+      <Checkbox {...label} defaultChecked size="small" />
+      <span>Blues</span>
+      </li>
+      <li>
+      <Checkbox {...label} defaultChecked size="small" />
+      <span>Beige Tones</span>
+      </li>
+      <li>
+      <Checkbox {...label} defaultChecked size="small" />
+      <span>Greens</span>
+      </li>
+      <li>
+      <Checkbox {...label} defaultChecked size="small" />
+      <span>Yellows</span>
+      </li>
+    </ul>
 
 
 

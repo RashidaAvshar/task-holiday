@@ -9,7 +9,7 @@ const Services = () => {
             <i className="fa-solid fa-car"></i>
             <span>
             <h4>Free Shipping</h4>
-            <p>For all oder over $99</p>
+            <p>For all order over $99</p>
             </span>
             </div>
             
@@ -18,7 +18,7 @@ const Services = () => {
             <i className="fa-regular fa-money-bill-1"></i>
             <span>
             <h4>Money Back Guarantee</h4>
-            <p>If good have Problems</p>
+            <p>If you have any Problems</p>
             </span>
             </div>
 
