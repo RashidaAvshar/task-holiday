@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -11,50 +12,102 @@ import Checkbox from '@mui/material/Checkbox';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-// const Card = ({image, title, price, description}) =>{
+const marks = [
+  {
+    value: 0,
+    label: '0 $',
+  },
+  {
+    value: 20,
+    label: '20 $',
+  },
+  {
+    value: 30,
+    label: '30 $',
+  },
+  {
+    value: 40,
+    label: '40 $',
+  },
+  {
+    value: 50,
+    label: '50 $',
+  },
+  {
+    value: 100,
+    label: '100 $',
+  },
+];
 
+function valuetext(value) {
+  return `${value}$`;
+  
+}
 
-//   return (
-//     <div className='card-section2'>
-//     <img src={image} alt="product" />
-//     <p>{title}</p>
-//     <p>{description}</p>
-//     <div className='icon'>
-//     <i class="fa-solid fa-star"></i>
-//     <i class="fa-solid fa-star"></i>
-//     <i class="fa-solid fa-star"></i>
-//     <i class="fa-solid fa-star"></i>
-//     <i class="fa-solid fa-star"></i>
-//     </div>
-//     <span> <span>$</span> {price}</span>
+const Card = ({image, title, price, description}) =>{
+  return (
+    <div className='card-section2'>
+    <img src={image} alt="product" />
+    <p>{title}</p>
+    <p>{description}</p>
+    <div className='icon'>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    </div>
+    <span> <span>$</span> {price}</span>
     
-// </div>
-//   )
-// }
+</div>
+  )
+}
 
 
-const Shop = ({img, title, description, price}) => {
+const Shop = () => {
   const [data, setData] = useState([]);
-  useEffect(()=>{
-      axios.get("https://fakestoreapi.com/products/").then((res)=>{
-          setData(res.data)
-      })
-  },[])
+    useEffect(()=>{
+        axios.get("https://fakestoreapi.com/products").then((res)=>{
+            setData(res.data)
+            console.log(res.data)
+        })
+    },[])
   return (
     <div className='container'>
-       <Accordion>
+      <div className="accordion">
+      <Accordion>
         <h4>CATEGORIES</h4>
         <div className='line'></div>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon  />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Women</Typography>
+          <Typography></Typography>
+        </AccordionSummary>
+        
+        <AccordionDetails>
+          <Typography>
+          
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography>Women
+          {data.map(item=>(
+          <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        ))}
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <ul>
+          <ul>
               <li>Coat</li>
               <li>Jacket</li>
               <li>Dresses</li>
@@ -62,11 +115,9 @@ const Shop = ({img, title, description, price}) => {
               <li>T-shirts</li>
               <li>Jeans</li>
             </ul>
-
           </Typography>
         </AccordionDetails>
       </Accordion>
-
 
       <Accordion>
         <AccordionSummary
@@ -156,10 +207,17 @@ const Shop = ({img, title, description, price}) => {
         </AccordionDetails>
       </Accordion>
 
-      <Box width={300}>
-      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+      <Box sx={{ width: 300 }}>
+      <Slider
+        aria-label="Custom marks"
+        defaultValue={20}
+        getAriaValueText={valuetext}
+        step={10}
+        valueLabelDisplay="auto"
+        marks={marks}
+        
+      />
     </Box>
-
 
 
     <ul>
@@ -226,28 +284,15 @@ const Shop = ({img, title, description, price}) => {
       <span>Yellows</span>
       </li>
     </ul>
+      </div>
 
 
 
 
-      <div className="card-box">
-    <div className='card'>
-    <img src={img} alt="product" />
-        <p>{title}</p>
-        <p>{description}</p>
-        <div className='icon'>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        </div>
-        <span> <span>$</span> {price} </span>
-        
-    </div>
-    </div>
+
+     
     </div>
   )
 }
 
-export default Shop
+export default Shop;

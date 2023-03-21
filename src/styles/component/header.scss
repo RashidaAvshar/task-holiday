@@ -15,7 +15,6 @@ header{
         figure{
             img{
                max-width: 98px;
-
                 height: 31px;
             }
         }
@@ -38,8 +37,9 @@ header{
                     
                     &:hover{
                         cursor: pointer;
-                        border-bottom: 3px solid darkred;
-                        border-radius: 1px;                        
+                        border-bottom: 3px solid #CA1515;
+                        border-radius: 1px;  
+
                     }
                     
                 }

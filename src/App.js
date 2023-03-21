@@ -12,10 +12,9 @@ import Womens from "./pages/Womens";
 import Home from "./pages/Home";
 import Mens from "./pages/Mens";
 // section
-import Firstsec from "./component/Firstsec";
-import Secondsec from "./component/Secondsec";
-import Slidersec from "./component/Slidersec";
-import Bestseller from "./component/Bestseller";
+import Instagramsec from "./component/Instagramsec";
+import Footer from "./component/Footer";
+
 
 
 
@@ -36,6 +35,8 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
       </Routes>
+      <Instagramsec/>
+      <Footer/>
       
   
     </div>

@@ -4,6 +4,7 @@ import App from './App';
 import "./styles/main.scss";
 import { BrowserRouter } from "react-router-dom"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./index.css";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
