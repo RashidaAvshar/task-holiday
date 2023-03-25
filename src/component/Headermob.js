@@ -1,39 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
 
 
 
-
 const Headermob = ({mobileHeaderOn, setMobileHeaderOn}) => {
-  // document.querySelector("#menu").addEventListener("click", ()=>{
-  //   let navMenu = document.querySelector("#mobile-header-deactive");
-  //   navMenu.classList.remove("mobile-header-deactive")
-  //   navMenu.classList.add("mobile-header-active");
-  // })
-  // document.querySelector("#x").addEventListener("click", ()=>{
-  //  let navMenu = document.querySelector("#mobile-header-deactive");
-  //   navMenu.classList.remove("mobile-header-active")
-  //   navMenu.classList.add("mobile-header-deactive");
-  // })
 
-  // useEffect(()=> {
-
-  //   if(mobileHeaderOn){
-  //     document.querySelector('.mobile-header').classList.remove('display-none')
-     
-  //   } 
-  //   // else if(!mobileHeaderOn){
-  //   //   document.querySelector('.mobile-header').classList.add('display-none')
-  //   // }
-
-  // },[mobil])
+  const [mobileHeaderClose, setMobileHeaderClose] = useState(false)
 
 
-
-
-  const mobileHeaderClose = (e) => {
+  const mobileHeaderCloses = (e) => {
   
     if(e.target===e.currentTarget){
       e.currentTarget.classList.add('display-none')
@@ -43,9 +20,9 @@ const Headermob = ({mobileHeaderOn, setMobileHeaderOn}) => {
   }
 
   return (
-    <div className='mobile-header display-none' onClick={mobileHeaderClose}>
+    <div className='mobile-header display-none' onClick={mobileHeaderCloses}>
          <div className='mobile-header-menu' id="mobile-header-deactive">
-      <i class="fa-solid fa-xmark" id="x"></i>
+      <i class="fa-solid fa-xmark" id="x" onClick={mobileHeaderClose}></i>
       <ul id="nav-menu">
           <li>
           <Link to="/">HOME</Link>
