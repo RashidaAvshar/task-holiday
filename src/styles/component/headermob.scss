@@ -1,0 +1,40 @@
+// .mobile-header-deactive{
+//     display: none;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(233, 27, 27, 0.679);
+//     position: absolute;
+//     z-index: 15px;
+//     top: 0;
+//     left: 0;
+   
+// }
+
+
+
+.mobile-header {
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.307);
+    z-index: 99;
+
+    .mobile-header-menu {
+        width: 40%;
+        height: 100%;
+        background-color: red;
+    }
+   
+}
+
+.display-show {
+    display: block;
+
+}
+
+.display-none {
+    display: none;
+}
+

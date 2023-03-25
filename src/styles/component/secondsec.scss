@@ -5,34 +5,26 @@
 .container {
     .second-nav{
         margin-top: 30px; 
-        height: 74px;
-        h3{
-            font-size: 24px;
-            font-weight: 600;
-            font-family: sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // height: 74px;
+        .new-product{
+            margin-top: 10px;
+            h3{
+                font-size: 24px;
+                font-weight: 600;
+                font-family: sans-serif;
+            }
+            span{
+                width: 60px;            
+                border-bottom: 3px solid #CA1515;
+                text-align: left;
+            }
         }
-        span{
-            width: 60px;            
-            border-bottom: 3px solid #CA1515;
-            text-align: left;
-        }
+    }  
 
-    }
-        
-    // ul{
-    //     display: flex;
-    //     li{
-    //         margin-left: 30px;
-    //         font-family: sans-serif;
-    //         font-size: 14px;
-    //         &:hover{
-    //             cursor: pointer;
-    //         }
-
-    //     }
-    // }
-
-   .section3-home-box {
+ .section3-home-box {
     
     .tab-panel {
         display: flex;
@@ -65,4 +57,12 @@
     }
 
     }
+
+        
+
+    
+        
+   
+
+  
 }

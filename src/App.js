@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Headers from "./component/Headers";
-import { data } from "./mockdata";
 // pages
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
@@ -14,6 +13,7 @@ import Mens from "./pages/Mens";
 // section
 import Instagramsec from "./component/Instagramsec";
 import Footer from "./component/Footer";
+
 
 
 

@@ -9,8 +9,6 @@ import axios from 'axios';
 
 
 const Card = ({image, title, price, description}) =>{
-
-
   return (
     <div className='card-section2'>
     <img src={image} alt="product" />
@@ -23,8 +21,7 @@ const Card = ({image, title, price, description}) =>{
     <i class="fa-solid fa-star"></i>
     <i class="fa-solid fa-star"></i>
     </div>
-    <span> <span>$</span> {price}</span>
-    
+    <span> <span>$</span> {price}</span>    
 </div>
   )
 }
@@ -48,13 +45,16 @@ const Secondsec = () => {
     
   return (
     <div className='container'>
-      <div className="second-nav">
+                   
+      
+        <Box className = 'section3-home-box' sx={{ width: '100%', typography: 'body1' }}>
+     
+      <TabContext value={value}>
+        <Box className = {'second-nav'} sx={{ borderBottom: 1, borderColor: 'divider' }} >
+        <div className="new-product">
         <h3>NEW PRODUCT</h3>
         <span></span>
         </div>
-        <Box className = 'section3-home-box' sx={{ width: '100%', typography: 'body1' }}>
-      <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
             <Tab label="All" value="1" />
             <Tab label="Women's" value="2" />
@@ -73,8 +73,8 @@ const Secondsec = () => {
 
         <TabPanel  className='tab-panel'  value="2">
         {data.map(item=>{
- if(item.category === "women's clothing"){
-  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+         if(item.category === "women's clothing"){
+        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -84,8 +84,8 @@ const Secondsec = () => {
 
         <TabPanel  className='tab-panel'  value="3">
         {data.map(item=>{
- if(item.category === "men's clothing"){
-  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        if(item.category === "men's clothing"){
+        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -95,8 +95,8 @@ const Secondsec = () => {
 
         <TabPanel  className='tab-panel'  value="4">
         {data.map(item=>{
- if(item.category === "electronics"){
-  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        if(item.category === "electronics"){
+        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -106,8 +106,8 @@ const Secondsec = () => {
 
         <TabPanel  className='tab-panel'  value="5">
         {data.map(item=>{
- if(item.category === "jewelery" ){
-  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        if(item.category === "jewelery" ){
+        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -117,8 +117,8 @@ const Secondsec = () => {
 
         <TabPanel  className='tab-panel'  value="6">
         {data.map(item=>{
- if(item.category === "women's clothing" ){
-  return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        if(item.category === "women's clothing" ){
+        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -129,6 +129,7 @@ const Secondsec = () => {
       </TabContext>
      
     </Box> 
+    
       
 
         

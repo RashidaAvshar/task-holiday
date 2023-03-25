@@ -1,3 +1,11 @@
+ @tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+
+// base
+@import "./base/index.scss";
+
 // component
 @import "./component/header.scss";
 @import "./component/firstsec.scss";
@@ -10,10 +18,12 @@
 @import "./component/footer.scss";
 
 
-// base
-@import "./base/index.scss";
 
 
 // pages
 @import "./pages/shop.scss";
+@import "./pages/details.scss";
+
+
+@import "./component/headermob.scss";
 

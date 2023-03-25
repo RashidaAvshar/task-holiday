@@ -44,34 +44,35 @@ function valuetext(value) {
   
 }
 
-const Card = ({image, title, price, description}) =>{
-  return (
-    <div className='card-section2'>
-    <img src={image} alt="product" />
-    <p>{title}</p>
-    <p>{description}</p>
-    <div className='icon'>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    </div>
-    <span> <span>$</span> {price}</span>
+// const Card = ({image, title, price, description}) =>{
+//   return (
+//     <div className='card-section2'>
+//     <img src={image} alt="product" />
+//     <p>{title}</p>
+//     <p>{description}</p>
+//     <div className='icon'>
+//     <i class="fa-solid fa-star"></i>
+//     <i class="fa-solid fa-star"></i>
+//     <i class="fa-solid fa-star"></i>
+//     <i class="fa-solid fa-star"></i>
+//     <i class="fa-solid fa-star"></i>
+//     </div>
+//     <span> <span>$</span> {price}</span>
     
-</div>
-  )
-}
+// </div>
+//   )
+// }
 
 
 const Shop = () => {
-  const [data, setData] = useState([]);
-    useEffect(()=>{
-        axios.get("https://fakestoreapi.com/products").then((res)=>{
-            setData(res.data)
-            console.log(res.data)
-        })
-    },[])
+  // const [data, setData] = useState([]);
+  //   useEffect(()=>{
+  //       axios.get("https://fakestoreapi.com/products").then((res)=>{
+  //           setData(res.data)
+  //           console.log(res.data)
+  //       })
+  //   },[])
+
   return (
     <div className='container'>
       <div className="accordion">
@@ -100,9 +101,9 @@ const Shop = () => {
           id="panel2a-header"
         >
           <Typography>Women
-          {data.map(item=>(
+          {/* {data.map(item=>(
           <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
-        ))}
+        ))} */}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
