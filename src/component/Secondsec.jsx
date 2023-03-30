@@ -21,7 +21,8 @@ const Card = ({image, title, price, description}) =>{
     <i class="fa-solid fa-star"></i>
     <i class="fa-solid fa-star"></i>
     </div>
-    <span> <span>$</span> {price}</span>    
+    <span> <span>$</span> {price}</span>   
+    
 </div>
   )
 }

@@ -5,6 +5,7 @@ header{
     margin-bottom: 5px;
     
  .header-container {
+    height: 100%;
        
     nav{
         // border: 1px solid black;
@@ -13,6 +14,7 @@ header{
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            height: 100%;
             figure{
                 img{
                    max-width: 98px;
@@ -89,7 +91,22 @@ header{
                
                
             }
+            .mobile-menu{
+                display: none;
+            }
         }
+        @media screen and (max-width: 1000px) {
+            .header{
+                display: none !important;
+            }
+            .logres{
+                display: none !important;
+            }
+            .mobile-menu{
+                display: block !important;
+            }
+        }
+        
  }
  .mobile-header-active{    
     display: block;
