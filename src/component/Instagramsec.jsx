@@ -12,7 +12,7 @@ const Instagramsec = () => {
     <div>
         <div className="insta-box">
         <div className='instagram' style={{backgroundImage: `url('${insta1}')`}}>
-        <i class="fa-brands fa-instagram"></i>
+        <i className="fa-brands fa-instagram"></i>
         </div>
         
         <div className='instagram' style={{backgroundImage: `url('${insta2}')`}}></div>

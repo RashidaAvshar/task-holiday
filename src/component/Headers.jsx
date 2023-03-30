@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../image/header/logo.png.webp";
 import Headermob from "./Headermob";
+import Showcount from "./Showcount";
+import { connect } from 'react-redux';
 
-const Headers = () => {
+const Headers = (props) => {
   const [mobileHeaderOn, setMobileHeaderOn] = useState(false);
 
   const mobileHeaderOpen = () => {
@@ -79,14 +81,14 @@ const Headers = () => {
             </li>
             <li>
               <span>
-                <i className="fa-solid fa-bag-shopping"></i>
+                <i className="fa-solid fa-bag-shopping">{props.count}</i>
               </span>
             </li>
           </ul>
 
-          <div class="mobile-menu" id="menu">
+          <div className="mobile-menu" id="menu">
             <i
-              class="fa-solid fa-bars"
+              className="fa-solid fa-bars"
               id="mobile-menu"
               onClick={mobileHeaderOpen}
             ></i>
@@ -97,4 +99,12 @@ const Headers = () => {
   );
 };
 
-export default Headers;
+function mapStateProps (state) {
+  return{
+    count: state.count
+    
+  }
+  
+}
+
+export default connect(mapStateProps) (Headers);

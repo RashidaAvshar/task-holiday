@@ -5,27 +5,10 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import axios from 'axios';
+import Card from './Card';
 
 
 
-const Card = ({image, title, price, description}) =>{
-  return (
-    <div className='card-section2'>
-    <img src={image} alt="product" />
-    <p>{title}</p>
-    <p>{description}</p>
-    <div className='icon'>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    </div>
-    <span> <span>$</span> {price}</span>   
-    
-</div>
-  )
-}
 
 
 
@@ -39,7 +22,6 @@ const Secondsec = () => {
     useEffect(()=>{
         axios.get("https://fakestoreapi.com/products").then((res)=>{
             setData(res.data)
-            console.log(res.data)
         })
     },[])
    
@@ -68,14 +50,14 @@ const Secondsec = () => {
         
         <TabPanel className='tab-panel' value="1">            
       {data.map(item=>(
-          <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+          <Card key={item.id}  title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
         ))}
         </TabPanel>
 
         <TabPanel  className='tab-panel'  value="2">
         {data.map(item=>{
          if(item.category === "women's clothing"){
-        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        return <Card key={item.id}  title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -86,7 +68,7 @@ const Secondsec = () => {
         <TabPanel  className='tab-panel'  value="3">
         {data.map(item=>{
         if(item.category === "men's clothing"){
-        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        return <Card key={item.id}   title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -97,7 +79,7 @@ const Secondsec = () => {
         <TabPanel  className='tab-panel'  value="4">
         {data.map(item=>{
         if(item.category === "electronics"){
-        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        return <Card key={item.id}   title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -108,7 +90,7 @@ const Secondsec = () => {
         <TabPanel  className='tab-panel'  value="5">
         {data.map(item=>{
         if(item.category === "jewelery" ){
-        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        return <Card key={item.id}    title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -119,7 +101,7 @@ const Secondsec = () => {
         <TabPanel  className='tab-panel'  value="6">
         {data.map(item=>{
         if(item.category === "women's clothing" ){
-        return <Card title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
+        return <Card key={item.id}  title = {item.title.slice(0, 10)} image = {item.image} price = {item.price} description = {item.description.slice(0,10)}/>
  }
         }
          
@@ -140,4 +122,5 @@ const Secondsec = () => {
   )
 }
 
-export default Secondsec;
+
+export default Secondsec

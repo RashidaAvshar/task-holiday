@@ -22,7 +22,7 @@ const Headermob = ({mobileHeaderOn, setMobileHeaderOn}) => {
   return (
     <div className='mobile-header display-none' onClick={mobileHeaderCloses}>
          <div className='mobile-header-menu' id="mobile-header-deactive">
-      <i class="fa-solid fa-xmark" id="x" onClick={mobileHeaderClose}></i>
+      {/* <i className="fa-solid fa-xmark" id="x" onClick={mobileHeaderClose}></i> */}
       <ul id="nav-menu">
           <li>
           <Link to="/">HOME</Link>
